@@ -11,4 +11,15 @@ resource "aws_lb" "test" {
     bucket  = aws_s3_bucket.lb_logs.bucket
     prefix  = "test-lb"
     enabled = true
+
+
+
+    access_logs {
+    bucket  = aws_s3_bucket.lb_logs.bucket
+    prefix  = "test-lb"
+    enabled = true
+    access_logs {
+    bucket  = aws_s3_bucket.lb_logs.bucket
+    prefix  = "test-lb"
+    enabled = true
   }
